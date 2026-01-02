@@ -1,0 +1,22 @@
+@use 'colors' as c;
+@use 'fonts' as f;
+
+body {
+    font-family: f.$f-roboto;
+    font-size: 1rem;
+    color: c.$clr-blue-800;
+    font-weight: f.$fw-regular-400;
+    line-height: 150%;
+    font-feature-settings: "liga" off, "clig" off ;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: f.$fw-bold-700;
+    line-height: 100%;
+}
+
+.email-label {
+    font-size: 0.75rem;
+    font-weight: f.$fw-bold-700;
+}

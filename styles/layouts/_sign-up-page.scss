@@ -1,0 +1,60 @@
+
+// Sign up page layout
+
+.sign-up-card-container {
+    margin: 0 auto;
+    width: 23.4375rem;
+    height: 100vh;
+}
+
+.context-container {
+    margin: 2.5rem 1.5rem 2.75rem 1.5rem;
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+        margin-bottom: 2.5rem;
+        margin-left: 0;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    align-items: start;
+
+}
+
+li::before {
+    margin-left: -2.5rem;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-image: url(../assets/images/icon-list.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+.email-flexbox {
+    padding: 0;
+    margin-top: 0;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+}
+
+.email-label {
+    padding-bottom: 1rem;
+}
+
+
