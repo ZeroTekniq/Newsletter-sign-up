@@ -1,10 +1,18 @@
 
+main {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
 // Sign up page layout
 
 .sign-up-card-container {
+    height: 49.9;
     margin: 0 auto;
     width: 23.4375rem;
-    height: 100vh;
+
 }
 
 .context-container {
@@ -30,7 +38,7 @@ ul {
 li {
     display: flex;
     align-items: start;
-
+    padding-bottom: 0.5rem;
 }
 
 li::before {
