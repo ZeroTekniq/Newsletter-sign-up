@@ -1,16 +1,18 @@
+@use '../globals/fonts' as f;
 
-
-.success-page-container {
-    margin: 0 auto;
-    display: grid;
+.success-page {margin: 0 auto;
+    display: none;
     place-items: center;
     height: 100vh;
-    z-index: 0;
+}
+
+.success-page-container {
+    width: 23.4375rem;
 }
 
 .success-context-container {
     margin: 9.3125rem 1.5rem 4.38rem 1.5rem;
-    height: 38.9rem;
+    height: clamp(34.5rem, 70vh, 56rem);
     position: relative;
 
     &__title {
@@ -18,6 +20,8 @@
     }
 
     &__text {
+
+        font-weight: f.$fw-regular-400;
         margin-bottom: 1.5rem;
     }
 

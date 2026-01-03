@@ -1,12 +1,15 @@
 const form = document.getElementById('form');
+const dismissButton = document.querySelector('.dismiss-btn');
 const email = document.getElementById('email');
 
-form.addEventListener('submit-email', e => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log(email.value);
-
     validateInputs();
 });
+
+dismissButton.addEventListener('click', () => {
+    closeSuccessPage();
+})
 
 
 const setError = (element, message) => {
@@ -16,22 +19,15 @@ const setError = (element, message) => {
 
     errorDisplay.innerText = message;
     element.classList.add('error');
-    element.classList.remove('valid');
-    validLabel.classList.remove('success');
     validLabel.classList.add('error-label');
-    inputControl.classList.remove('success', 'valid');
 }
 
 const setSuccess = (element, message) => {
     const inputControl = element.parentElement;
-    const validLabel = inputControl.querySelector('.valid-label');
     const errorDisplay = inputControl.querySelector('.valid-label');
 
     errorDisplay.innerText = message;
-    element.classList.add('valid');
-    validLabel.classList.add('success');
-    inputControl.classList.remove('error');
-    validLabel.classList.remove('error');
+    element.classList.remove('error');
 }
 
 const isValidEmail = email => {
@@ -44,12 +40,33 @@ const validateInputs = () => {
 
     if (emailValue === '') {
         setError(email, 'Email cannot be blank');
-        console.log('Email cannot be blank');
     } else if (!isValidEmail(emailValue)) {
         setError(email, 'Looks like this is not an email');
-        console.log('Looks like this is not an email');
     } else {
-        setSuccess(email, 'Success');
-        console.log('Success');
+        setSuccess(email, '');
+        openSuccessPage();
     }
+}
+
+function openSuccessPage() {
+    const successPage = document.querySelector('.success-page');
+    const mainPage = document.querySelector('.main-page');
+
+    mainPage.style.display = 'none';
+    successPage.style.display = 'grid';
+    updateSuccessPage();
+}
+
+function closeSuccessPage() {
+    const successPage = document.querySelector('.success-page');
+    const mainPage = document.querySelector('.main-page');
+    
+    successPage.style.display = 'none';
+    mainPage.style.display = 'grid';
+    email.value = '';
+}
+
+function updateSuccessPage() {
+    const successPageUserEmail = email.value.trim();
+    document.getElementById('user-email').textContent = successPageUserEmail;
 }

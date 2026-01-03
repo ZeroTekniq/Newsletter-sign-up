@@ -13,8 +13,8 @@
 <body>
 
   <!-- Sign-up form start -->
-<!-- 
-  <main>
+
+  <main class="main-page">
     <div class="sign-up-card-container">
       <form id="form" action="/">
         <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration of screenshots">
@@ -37,23 +37,25 @@
         </div>
       </form>
     </div>
-  </main> -->
+  </main>
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  <div class="success-page-container">
+  <div class="success-page">
+    <div class="success-page-container">
     
     
-    <div class="success-context-container">
-      <img class="success-context-container__icon" src="./assets/images/icon-success.svg" alt="success icon">
-      <h1 class="success-context-container__title">Thanks for subscribing!</h1>
-      <p class="success-context-container__text">
-        A confirmation email has been sent to ash@loremcompany.com.
-        Please open it and click the button inside to confirm your subscription.
-      </p>
-      <button class="dismiss-btn">Dismiss message</button>
+      <div class="success-context-container">
+        <img class="success-context-container__icon" src="./assets/images/icon-success.svg" alt="success icon">
+        <h1 class="success-context-container__title">Thanks for subscribing!</h1>
+        <p class="success-context-container__text">
+          A confirmation email has been sent to <strong id="user-email"></strong>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="dismiss-btn" type ="reset">Dismiss message</button>
+      </div>
     </div>
   </div>
 
