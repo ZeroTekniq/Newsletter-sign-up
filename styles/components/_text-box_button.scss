@@ -1,17 +1,24 @@
 @use '../globals/colors' as c;
 
-.text-box {
+.label-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+// Template for text boxes and buttons
+%text-box-button-styling {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: -1rem;
     width: 100%;
     height: 3.5rem;
-    border-radius: 0.5rem;
-    padding-left: 1.5rem;
 }
 
-.subscribe-btn {
+%buttnon-styling {
+    @extend %text-box-button-styling;
+    border-radius: 0.5rem;
     background-color: c.$clr-blue-800;
     color: c.$clr-white;
     border: none;
@@ -19,7 +26,29 @@
     margin-top: 1.5rem;
 }
 
+.text-box-styling {
+    @extend %text-box-button-styling;
+    border-radius: 0.5rem;
+    padding-left: 1.5rem;
+    border: 1px solid c.$clr-grey;
+}
+
+.subscribe-btn {
+    @extend %text-box-button-styling;
+    @extend %buttnon-styling;
+}
+
 .subscribe-btn:hover {
+    cursor: pointer;
+    background-color: c.$clr-red;
+}
+
+.dismiss-btn {
+    @extend %text-box-button-styling;
+    @extend %buttnon-styling;
+}
+
+.dismiss-btn:hover {
     cursor: pointer;
     background-color: c.$clr-red;
 }

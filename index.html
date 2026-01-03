@@ -13,40 +13,52 @@
 <body>
 
   <!-- Sign-up form start -->
-
+<!-- 
   <main>
     <div class="sign-up-card-container">
-      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration of screenshots">
-      <div class="context-container">
-        <h1 class="context-container__title">Stay updated!</h1>
-        <p class="context-container__text">Join 60,000+ product managers receiving monthly updates on:</p>
-        <ul class="context-container__list">
-          <li>Product discovery and building what matters</li>
-          <li>Measuring to ensure updates are a success</li>
-          <li>And much more!</li>
-        </ul>
-        <div class="email-flexbox">
-          <label for="email" class="email-label">Email address</label>
-          <input type="email" class="text-box" name="email" placeholder="email@company.com">
+      <form id="form" action="/">
+        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration of screenshots">
+        <div class="context-container">
+          <h1 class="context-container__title">Stay updated!</h1>
+          <p class="context-container__text">Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul class="context-container__list">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+          <div class="email-flexbox">
+            <div class="label-flexbox">
+              <label for="email" class="email-label">Email address</label>
+              <div id="valid-label" class="email-label valid-label"></div>
+            </div>
+            <input id ="email" type="text" class="text-box-styling " name="email" placeholder="email@company.com">
+          </div>
+          <button class="subscribe-btn" type="submit">Subscribe to monthly newsletter</button>
         </div>
-        <button class="text-box subscribe-btn">Subscribe to monthly newsletter</button>
-      </div>
+      </form>
     </div>
-  </main>
+  </main> -->
 
   <!-- Sign-up form end -->
 
   <!-- Success message start -->
 
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
+  <div class="success-page-container">
+    
+    
+    <div class="success-context-container">
+      <img class="success-context-container__icon" src="./assets/images/icon-success.svg" alt="success icon">
+      <h1 class="success-context-container__title">Thanks for subscribing!</h1>
+      <p class="success-context-container__text">
+        A confirmation email has been sent to ash@loremcompany.com.
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button class="dismiss-btn">Dismiss message</button>
+    </div>
+  </div>
 
   <!-- Success message end -->
   
-
+<script src="/dist/index.js"></script>
 </body>
 </html>

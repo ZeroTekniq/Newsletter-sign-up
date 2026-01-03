@@ -1,0 +1,33 @@
+
+
+.success-page-container {
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    z-index: 0;
+}
+
+.success-context-container {
+    margin: 9.3125rem 1.5rem 4.38rem 1.5rem;
+    height: 38.9rem;
+    position: relative;
+
+    &__title {
+        margin-block: 1.5rem;
+    }
+
+    &__text {
+        margin-bottom: 1.5rem;
+    }
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.dismiss-btn {
+    position: absolute;  
+    bottom: 0;
+}
