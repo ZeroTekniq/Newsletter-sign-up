@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./dist/style.css">
 
-  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <title>Newsletter sign-up form with success message</title>
 
 </head>
 <body>
@@ -17,23 +17,27 @@
   <main class="main-page">
     <div class="sign-up-card-container">
       <form id="form" action="/">
-        <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration of screenshots">
         <div class="context-container">
-          <h1 class="context-container__title">Stay updated!</h1>
-          <p class="context-container__text">Join 60,000+ product managers receiving monthly updates on:</p>
-          <ul class="context-container__list">
-            <li>Product discovery and building what matters</li>
-            <li>Measuring to ensure updates are a success</li>
-            <li>And much more!</li>
-          </ul>
-          <div class="email-flexbox">
-            <div class="label-flexbox">
-              <label for="email" class="email-label">Email address</label>
-              <div id="valid-label" class="email-label valid-label"></div>
+          <div class="context-container__img" role="img" aria-label="Newsletter signup illustration"></div>
+          <div class="text-container">
+            <h1 class="context-container__title">Stay updated!</h1>
+            <p class="context-container__text">Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="context-container__list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+            <div class="email-flexbox">
+              <div class="label-flexbox">
+                <label for="email" class="email-label">Email address</label>
+                <div id="valid-label" class="email-label valid-label" role="alert" aria-live="polite"></div>
+              </div>
+              <input id ="email" type="text" class="text-box-styling " name="email" placeholder="email@company.com" aria-required="true"
+              aria-invalid="false"
+              aria-describedby="valid-label"">
             </div>
-            <input id ="email" type="text" class="text-box-styling " name="email" placeholder="email@company.com">
+            <button class="subscribe-btn" type="submit">Subscribe to monthly newsletter</button>
           </div>
-          <button class="subscribe-btn" type="submit">Subscribe to monthly newsletter</button>
         </div>
       </form>
     </div>
@@ -45,10 +49,8 @@
 
   <div class="success-page">
     <div class="success-page-container">
-    
-    
       <div class="success-context-container">
-        <img class="success-context-container__icon" src="./assets/images/icon-success.svg" alt="success icon">
+        <img class="success-context-container__icon" src="./assets/images/icon-success.svg" alt="">
         <h1 class="success-context-container__title">Thanks for subscribing!</h1>
         <p class="success-context-container__text">
           A confirmation email has been sent to <strong id="user-email"></strong>.

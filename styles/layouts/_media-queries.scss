@@ -1,0 +1,106 @@
+@use '../globals/colors' as c;
+
+@media screen and (min-width: 48rem) {
+
+    body {
+        background-color: c.$clr-blue-700;
+    }
+    
+    .main-page {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+    }
+
+    .sign-up-card-container {
+        width: 38rem;
+        height: 54.875rem;
+        background-color: c.$clr-white;
+        border-radius: 2.25rem;
+    }
+    
+    .context-container {
+        margin: 2.5rem;
+        width: 32.99999rem;
+
+        &__img {
+            background-image: url(../assets/images/illustration-sign-up-tablet.svg);
+            width: 100%;
+            height: 22.39285rem;
+            border-radius: 1rem;
+        }
+
+        &__list {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+.text-container {
+    margin: 0;
+}
+
+.success-page-container {
+    width: 31.5rem;
+    height: 32.5rem;
+    background-color: c.$clr-white;
+    border-radius: 2.25rem;
+}
+
+.success-context-container {
+    margin: 4rem;
+    width: 23.5rem;
+    height: 24.5rem;
+
+    &__icon {
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+}
+
+@media screen and (min-width: 90rem) {
+
+    .sign-up-card-container {
+        width: 56.5rem;
+        height: 40.0625rem;
+        background-color: c.$clr-white;
+        border-radius: 2.25rem;
+    }
+    
+    .context-container {
+        margin: 2rem;
+        width: 52.5rem;
+        height: 36.0625rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+        &__title {
+            font-size: 3.5rem;
+        }
+
+        &__img {
+            background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+            width: 25rem;
+            height: 36.0625rem;
+            grid-column: 2/2;
+            grid-row: 1;
+        }
+
+        &__list {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .text-container {
+        height: 36.0625rem;
+        margin: 0;
+        display: grid;
+        place-content: center;
+    }
+
+    .email-label {
+        padding-bottom: 1.25rem;
+    }
+}
